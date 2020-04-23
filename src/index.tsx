@@ -1,17 +1,10 @@
+// based on https://medium.com/javascript-in-plain-english/how-to-build-an-app-with-react-express-and-sqlite-c2c24fc7ae3d
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './styles/styles.css';
+import { Bookshelf } from './components/bookshelf';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const rootElement = document.getElementById('root');
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<Bookshelf />, rootElement);
